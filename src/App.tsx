@@ -44,7 +44,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen bg-gray-50 font-sans">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-50 font-sans">
       <Preview
         settings={settings}
         file={file}

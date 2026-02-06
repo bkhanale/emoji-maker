@@ -181,12 +181,12 @@ export function Preview({ settings, setFile, file, canvasRef }: PreviewProps) {
   }, [settings, imageUrl, canvasRef]); // Dependencies
 
   return (
-    <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-8 relative overflow-hidden">
+    <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-4 lg:p-8 relative overflow-hidden">
       {!file ? (
         <div
           {...getRootProps()}
           className={cn(
-            "w-96 h-64 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center cursor-pointer transition-all duration-200 gap-4",
+            "w-full max-w-sm h-64 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center cursor-pointer transition-all duration-200 gap-4",
             isDragActive
               ? "border-indigo-500 bg-indigo-50"
               : "border-gray-300 bg-white hover:border-indigo-400 hover:bg-gray-50",
