@@ -28,7 +28,7 @@ export function Controls({
   hasFile,
 }: ControlsProps) {
   return (
-    <div className="w-full lg:w-80 bg-white border-l border-gray-100 h-full p-6 flex flex-col gap-8 shadow-sm overflow-y-auto">
+    <div className="w-full lg:w-80 bg-white border-l border-gray-100 p-6 flex flex-col gap-8 shadow-sm overflow-y-auto">
       <div className="flex items-center gap-2 pb-4 border-b border-gray-100">
         <Settings className="w-5 h-5 text-indigo-600" />
         <h2 className="font-semibold text-gray-900">Config</h2>
