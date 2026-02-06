@@ -26,7 +26,10 @@ function App() {
     stickerPadding: 4,
   });
 
-  const updateSettings = (key: keyof Settings, value: any) => {
+  const updateSettings = (
+    key: keyof Settings,
+    value: string | number | boolean,
+  ) => {
     setSettings((prev) => ({ ...prev, [key]: value }));
   };
 

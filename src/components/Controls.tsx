@@ -13,7 +13,10 @@ interface Settings {
 
 interface ControlsProps {
   settings: Settings;
-  updateSettings: (key: keyof Settings, value: any) => void;
+  updateSettings: (
+    key: keyof Settings,
+    value: string | number | boolean,
+  ) => void;
   onDownload: () => void;
   hasFile: boolean;
 }

@@ -40,11 +40,7 @@ export function Preview({ settings, setFile, file, canvasRef }: PreviewProps) {
 
   // Load image from file
   useEffect(() => {
-    if (!file) {
-      setImageUrl(null);
-      imageRef.current = null;
-      return;
-    }
+    if (!file) return;
 
     const url = URL.createObjectURL(file);
     const img = new Image();
@@ -54,7 +50,11 @@ export function Preview({ settings, setFile, file, canvasRef }: PreviewProps) {
     };
     img.src = url;
 
-    return () => URL.revokeObjectURL(url);
+    return () => {
+      URL.revokeObjectURL(url);
+      imageRef.current = null;
+      setImageUrl(null);
+    };
   }, [file]);
 
   // Draw to canvas
@@ -178,7 +178,7 @@ export function Preview({ settings, setFile, file, canvasRef }: PreviewProps) {
         renderH,
       );
     }
-  }, [settings, imageUrl, imageRef.current]); // Dependencies
+  }, [settings, imageUrl, canvasRef]); // Dependencies
 
   return (
     <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-8 relative overflow-hidden">
