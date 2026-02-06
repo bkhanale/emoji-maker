@@ -37,12 +37,3 @@ pnpm build
 # Lint code
 pnpm lint
 ```
-
-## Deployment
-
-The project is configured for **GitHub Pages** deployment via GitHub Actions.
-Any push to the `main` branch will trigger a build and deploy.
-
-### Custom Domain
-
-To use a custom domain, ensure a `CNAME` file exists in the `public/` directory with your domain name.
